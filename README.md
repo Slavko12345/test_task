@@ -1,4 +1,4 @@
-# Test task for course
+# Test task for the course
 
 1. The model is a single LSTM block that takes as input word tokens and outputs predicted text readability.
    
