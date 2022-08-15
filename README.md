@@ -11,15 +11,14 @@
    
    Metrics for the model: rmse: 1.03
    
- 2. Script for running the Flask API:
- ```
- python service.py
- ```
+ 2. To run the API, download pretrained model to the folder models/ (or train your own), and run the Flask API with:
+    ```
+    python service.py
+    ```
  
  3. The service is deployed on Google Cloud.
- 
-    Script for testing the request to API:
- ```
- python test_api.py
- ```
+    To test the script run the following commmand:
+    ```
+    python test_api.py
+    ```
  
