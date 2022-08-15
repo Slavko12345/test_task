@@ -2,9 +2,8 @@ import requests
 
 
 def test_api(text):
-    url = 'http://127.0.0.1:5000/get_text_readability'
-    params = {'text': text}
-    result = requests.get(url, params=params)
+    url = f'http://127.0.0.1:5000/get_text_readability/{text}'
+    result = requests.get(url)
     result = result.json()
 
     print(f'Provided text : {text}')

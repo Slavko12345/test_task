@@ -1,13 +1,10 @@
 from flask import Flask
-from flask_restful import Resource, Api, reqparse
+from flask_restful import Resource, Api
 
 from inference import TargetPredictor
 
 app = Flask(__name__)
 api = Api(app)
-
-get_parser = reqparse.RequestParser()
-get_parser.add_argument('text')
 
 
 class TextReadability(Resource):
@@ -15,15 +12,11 @@ class TextReadability(Resource):
     def __init__(self):
         self.target_predictor = TargetPredictor()
 
-    def get(self):
-        args = get_parser.parse_args()
-        if args['text']:
-            return {'score': self.target_predictor.predict(args['text'])}
-        else:
-            return {'error': 'No text provided'}
+    def get(self, text):
+        return {'score': self.target_predictor.predict(text)}
 
 
-api.add_resource(TextReadability, '/get_text_readability')
+api.add_resource(TextReadability, '/get_text_readability/<text>')
 
 if __name__ == '__main__':
     app.run()
