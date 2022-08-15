@@ -1,6 +1,6 @@
 # Test task for course
 
-1. The model used is a single LSTM block that takes as input word tokens and outputs predicted text readability.
+1. The model is a single LSTM block that takes as input word tokens and outputs predicted text readability.
    
    Command to lauch training:
    ```
