@@ -2,7 +2,7 @@ import requests
 
 
 def test_api(text):
-    url = f'http://127.0.0.1:5000/get_text_readability/{text}'
+    url = f'http://34.125.241.180:5000/get_text_readability/{text}'
     result = requests.get(url)
     result = result.json()
 

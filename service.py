@@ -19,4 +19,4 @@ class TextReadability(Resource):
 api.add_resource(TextReadability, '/get_text_readability/<text>')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
